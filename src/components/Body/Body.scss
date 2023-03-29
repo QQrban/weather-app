@@ -8,10 +8,24 @@
         justify-content: space-between;
 
         p {
-            font-size: 34px;
+            font-size: 26px;
+            margin-bottom: 40px;
             color: #dadada;
             text-shadow: 2px 2px 2px black;
         }
+    }
+
+    .search-container {
+        position: relative;
+    }
+
+    .search-ico {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #dadada;
+        cursor: pointer;
     }
 
     &-search {
@@ -26,16 +40,22 @@
         background-color: hsla(0, 0%, 100%, 0.364);
         color: #dadada;
         text-shadow: 2px 2px 2px black;
+
+        &::placeholder {
+            color: #dadada;
+            opacity: 0.6;
+        }
     }
 
     h1 {
         text-align: left;
-        font-size: 54px;
+        font-size: 46px;
         color: #dadada;
         text-shadow: 2px 2px 2px black;
     }
 
     &-city {
+        text-transform: uppercase;
         text-align: left;
         font-size: 34px;
         color: #dadada;
@@ -60,8 +80,12 @@
         }
 
         p {
-            font-size: 24px;
+            font-size: 21px;
         }
+    }
+
+    .display-city {
+        font-size: 26px;
     }
 
 }

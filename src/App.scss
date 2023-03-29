@@ -25,13 +25,41 @@ img {
     display: block;
 }
 
-body {
-    font-family: 'Roboto', serif;
-    background: url(./assets/background/rainy.jpg);
-    background-repeat: no-repeat;
+%bg-position {
+    background-color: rgba(57, 58, 55, 0.911) !important;
+    background-blend-mode: multiply !important;
+    background-attachment: fixed !important;
     background-position: center;
     background-size: cover;
-    background-color: rgba(90, 92, 88, 0.911);
-    background-blend-mode: multiply;
-    background-attachment: fixed;
+}
+
+
+body {
+    font-family: 'Roboto', serif;
+}
+
+.bg-sunny {
+    background: url('./assets/background/sunny.jpg');
+    @extend %bg-position;
+
+}
+
+.bg-rainy {
+    background: url('./assets/background/rainy.jpg');
+    @extend %bg-position;
+}
+
+.bg-snowy {
+    background: url('./assets/background/snowy.jpg');
+    @extend %bg-position;
+}
+
+.bg-cloudy {
+    background: url('./assets/background/cloudy.jpg');
+    @extend %bg-position;
+}
+
+.bg-mist {
+    background: url('./assets/background/mist.jpg');
+    @extend %bg-position;
 }
