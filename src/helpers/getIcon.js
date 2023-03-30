@@ -1,4 +1,3 @@
-
 export const getIcon = (main) => {
     let weather = main.toLowerCase();
     let icon = '';
@@ -10,20 +9,13 @@ export const getIcon = (main) => {
         drizzle: 'https://i.ibb.co/yXszmSx/rainy.png',
         rain: 'https://i.ibb.co/yXszmSx/rainy.png',
         thunderstorm: 'https://i.ibb.co/bXnKFc8/storm.png',
-    }
+    };
     for (const key in icons) {
         if (weather === key) {
-            return icon = icons[key];
+            return (icon = icons[key]);
         } else {
             icon = 'mist';
         }
     }
     return icon;
-}
-
-
-
-
-
-
-
+};

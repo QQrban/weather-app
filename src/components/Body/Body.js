@@ -17,16 +17,14 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-
 const Body = () => {
     const [town, setTown] = useState('Tallinn');
     const [today, setToday] = useState([]);
     const [futureDate, setFutureDate] = useState([]);
 
     useEffect(() => {
-
         fetchData(town)
-            .then(data => {
+            .then((data) => {
                 const todayInfo = [];
                 const futureInfo = [];
                 const itemTemp = data.list[0].main;
@@ -36,7 +34,9 @@ const Body = () => {
                 for (let i = 8; i < data.list.length; i += 8) {
                     futureInfo.push({
                         currTemperature: Math.round(data.list[i].main.temp),
-                        day: moment(data.list[i].dt_txt.split(' ').splice(0, 1).join('')).format('ddd'),
+                        day: moment(
+                            data.list[i].dt_txt.split(' ').splice(0, 1).join('')
+                        ).format('ddd'),
                         icon: getIcon(data.list[i].weather[0].main),
                     });
                     setFutureDate(futureInfo);
@@ -59,34 +59,36 @@ const Body = () => {
                     day: moment(dates).format('ddd'),
                     icon: getIcon(data.list[0].weather[0].main),
                 });
-                setToday(todayInfo)
+                setToday(todayInfo);
             })
-            .catch(err => {
+            .catch((err) => {
                 console.log(err);
-                alert('Something went wrong :(')
-            })
-    }, [town])
+                alert('Something went wrong :(');
+            });
+    }, [town]);
 
     return (
-        <main className='display'>
+        <main className="display">
             <Search setTown={setTown} />
-            <Item sx={{
-                mt: '20px',
-                bgcolor: 'hsla(0, 0%, 100%, 0.364)',
-                color: 'black',
-                padding: '30px 50px',
-                borderRadius: '19px'
-            }}>
+            <Item
+                sx={{
+                    mt: '20px',
+                    bgcolor: 'hsla(0, 0%, 100%, 0.364)',
+                    color: 'black',
+                    padding: '30px 50px',
+                    borderRadius: '19px',
+                }}
+            >
                 <div className="display-header">
                     <h1>Current Weather</h1>
                     <p>{moment().format('DD.MM.YYYY')}</p>
                 </div>
-                <h3 className='display-city'>{town}</h3>
+                <h3 className="display-city">{town}</h3>
                 <DisplayInfo today={today} />
             </Item>
             <OtherDays futureDate={futureDate} />
         </main>
-    )
-}
+    );
+};
 
 export default Body;

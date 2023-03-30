@@ -1,5 +1,4 @@
 .display {
-
     &-wrapper {
         display: flex;
         justify-content: space-between;
@@ -16,7 +15,6 @@
     }
 
     &-icon {
-
         img {
             width: 160px;
         }
@@ -71,12 +69,11 @@
                     color: #6894c7;
                     font-weight: 600;
                     text-shadow: 0px 1px 1px black;
-
                 }
 
                 svg {
                     font-size: 40px;
-                    color: rgb(78, 78, 78)
+                    color: rgb(78, 78, 78);
                 }
             }
         }
@@ -135,8 +132,6 @@
         .info-feels {
             margin-top: 20px;
         }
-
-
     }
 }
 
@@ -146,10 +141,8 @@
         align-items: flex-start;
         justify-content: flex-start;
 
-
         .display-icon {
             width: 90px;
-
         }
 
         .display-temperature {
@@ -166,18 +159,16 @@
             gap: 14px;
 
             .min-max {
-
                 p {
                     font-size: 22px;
                 }
 
                 svg {
                     font-size: 30px;
-                    color: rgb(78, 78, 78)
+                    color: rgb(78, 78, 78);
                 }
             }
         }
-
 
         .additional-item {
             justify-content: flex-start;
@@ -189,7 +180,6 @@
 
             &-name {
                 font-size: 20px;
-
             }
 
             &-numbers {
@@ -197,7 +187,6 @@
                 width: 60px;
             }
         }
-
     }
 }
 
@@ -232,7 +221,6 @@
                 text-align: center;
                 font-size: 20px;
             }
-
         }
 
         .display-temperature {
@@ -248,9 +236,7 @@
             flex-direction: row;
             justify-content: center;
             gap: 18px;
-
         }
-
 
         .additional-item {
             justify-content: space-between;
@@ -262,14 +248,11 @@
 
             &-name {
                 font-size: 22px;
-
             }
 
             &-numbers {
                 font-size: 22px;
             }
         }
-
     }
-
 }
