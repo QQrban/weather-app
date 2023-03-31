@@ -243,16 +243,22 @@
             gap: 16px;
 
             svg {
-                font-size: 32px;
+                font-size: 30px;
             }
 
             &-name {
-                font-size: 22px;
+                font-size: 20px;
             }
 
             &-numbers {
-                font-size: 22px;
+                font-size: 18px;
             }
         }
+    }
+}
+
+@media (max-width: 408px) {
+    .additional-item {
+        justify-content: center !important;
     }
 }

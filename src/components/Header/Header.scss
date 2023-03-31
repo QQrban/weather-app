@@ -30,7 +30,6 @@
 }
 
 @media (max-width: 576px) {
-
     .header {
         .MuiContainer-root {
             display: flex;
@@ -45,6 +44,14 @@
             font-size: 44px;
         }
     }
+}
 
+@media (max-width: 408px) {
+    .MuiContainer-root {
+        gap: 7px;
+    }
 
+    .header-logo {
+        flex-direction: column;
+    }
 }
